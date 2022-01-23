@@ -18,9 +18,9 @@ labels = dataset.iloc[:,-1]
 features = pd.get_dummies(dataset)
 #split data into training and testing batches
 features_train, features_test, labels_train, labels_test =  train_test_split(features,
-                                labels,
-                                test_size=.33,
-                                random_state=42)
+                                                                             labels,
+                                                                             test_size=.33,
+                                                                             random_state=42)
 #define numerical data
 numerical_feats = features.select_dtypes(include=['float64', 'int64'])
 numerical_columns = numerical_feats.columns
